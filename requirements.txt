@@ -1,0 +1,13 @@
+python-dotenv
+requests
+openai
+anthropic
+protobuf
+pyttsx3
+flask
+flask-cors
+flask-sqlalchemy
+flask-bcrypt
+google-generativeai
+psycopg2-binary
+gunicorn
