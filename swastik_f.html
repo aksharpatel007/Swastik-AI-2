@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>SWASTIK AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Splash -->
+    <section id="splash" class="screen show fade-in">
+        <div class="logo"><img src="assets/logo.svg" alt="logo"> SWASTIK <span class="muted">AI</span></div>
+        <div class="small">Loading...</div>
+    </section>
+
+    <!-- Auth: Login -->
+    <section id="login" class="screen">
+        <div class="card fade-in">
+            <h2>Login</h2>
+            <div class="sub">Welcome back</div>
+            <input type="email" id="loginEmail" placeholder="Email" />
+            <div class="row">
+                <input type="password" id="loginPass" placeholder="Password" />
+                <button class="btn" style="padding:12px" onclick="togglePass('loginPass')">👁</button>
+            </div>
+            <button class="btn" style="width:100%; margin-top:12px" onclick="login()">Login</button>
+            <div class="sub" style="margin-top:14px">New here?
+                <a class="link" href="#" onclick="show('signup')">Create account</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auth: Signup -->
+    <section id="signup" class="screen">
+        <div class="card fade-in">
+            <h2>Sign Up</h2>
+            <div class="sub">Create your account</div>
+            <input type="email" id="suEmail" placeholder="Email" />
+            <div class="row">
+                <input type="password" id="suPass" placeholder="Password" />
+                <button class="btn" style="padding:12px" onclick="togglePass('suPass')">👁</button>
+            </div>
+            <div class="row">
+                <input type="password" id="suConfirm" placeholder="Confirm password" />
+                <button class="btn" style="padding:12px" onclick="togglePass('suConfirm')">👁</button>
+            </div>
+            <button class="btn" style="width:100%; margin-top:12px" onclick="signup()">Create account</button>
+            <div class="sub" style="margin-top:14px">Already have an account?
+                <a class="link" href="#" onclick="show('login')">Login</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- App -->
+    <section id="app" class="fade-in">
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="title">
+                    <div class="icon"><img src="assets/logo.svg" alt="logo"></div>
+                </div>
+                <button class="menu-btn" onclick="newChat()">+ New Chat</button>
+                <button class="menu-btn" onclick="openHistory()">📜 History</button>
+                <div id="history" class="history"></div>
+            </aside>
+            <main class="main">
+                <div class="header">
+
+
+                    <div class="muted" id="recState">Idle</div>
+                </div>
+                <div id="chat" class="chat"></div>
+                <div class="composer">
+                    <button class="btn" onclick="send()">↪</button>
+                    <div class="mic-container">
+                        <input id="command" type="text" placeholder="Type your command…" />
+                        <button class="mic" id="micBtn" title="Voice input (toggle)" onclick="toggleMic()">🎤</button>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- History Modal -->
+    <div id="historyModal" class="modal" onclick="closeModal(event)">
+        <div class="sheet card">
+            <h2 style="margin-bottom:10px">Command History</h2>
+            <div id="historySheet"></div>
+            <div style="margin-top:14px; display:flex; justify-content:flex-end">
+                <button class="btn" onclick="hideModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
