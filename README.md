@@ -59,7 +59,7 @@ pip install -r requirements.txt
 ```
 
 4. Ensure PostgreSQL is running.
-5. Create the required database. In the current version, the app uses a hardcoded database name in `app.py`, so the database must be named `swastik_data`.
+5. Create the required database. In the current version, the app uses a hardcoded database name in `app.py`, so the database must be named `swastik_data` (this limits deployment flexibility until made configurable).
 
 ```bash
 createdb swastik_data
@@ -77,4 +77,4 @@ The application runs on `http://localhost:5001` by default.
 ## Notes
 
 - Database tables are created automatically at startup using `db.create_all()` once the PostgreSQL database exists.
-- In development mode, Flask debug is enabled in `app.py`; for production, run with Gunicorn and keep debug mode disabled.
+- In development mode, Flask debug is enabled in `app.py`; never enable debug mode in production because it can expose sensitive data and remote code execution paths through the debugger. Use Gunicorn with debug disabled for production.
