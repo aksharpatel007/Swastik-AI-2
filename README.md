@@ -59,7 +59,7 @@ pip install -r requirements.txt
 ```
 
 4. Ensure PostgreSQL is running.
-5. Create the required database. The application currently uses a fixed database name in code: `swastik_data`.
+5. Create the required database. The application currently uses a fixed database name in `app.py` (`swastik_data`), so changing it requires a code update.
 
 ```bash
 createdb swastik_data
@@ -76,5 +76,5 @@ The application runs on `http://localhost:5001` by default.
 
 ## Notes
 
-- Database tables are created automatically at startup using `db.create_all()`.
+- Database tables are created automatically at startup using `db.create_all()` after the PostgreSQL database already exists.
 - In development mode, Flask debug is enabled in `app.py`.
