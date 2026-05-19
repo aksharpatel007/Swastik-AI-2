@@ -53,13 +53,24 @@ Set these in a `.env` file or environment:
 1. Clone the repository.
 2. Create and activate a Python virtual environment.
 3. Install dependencies:
-   `pip install -r requirements.txt`
+
+```bash
+pip install -r requirements.txt
+```
+
 4. Ensure PostgreSQL is running.
-5. Create the database:
-   `createdb swastik_data`
+5. Create the required database. The application currently uses a fixed database name in code: `swastik_data`.
+
+```bash
+createdb swastik_data
+```
+
 6. Configure environment variables.
 7. Start the app:
-   `python app.py`
+
+```bash
+python app.py
+```
 
 The application runs on `http://localhost:5001` by default.
 
