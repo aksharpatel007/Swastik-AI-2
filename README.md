@@ -59,7 +59,7 @@ pip install -r requirements.txt
 ```
 
 4. Ensure PostgreSQL is running.
-5. Create the required database. The app currently uses a hardcoded database name in `app.py`, so the database must be named `swastik_data`.
+5. Create the required database. In the current version, the app uses a hardcoded database name in `app.py`, so the database must be named `swastik_data`.
 
 ```bash
 createdb swastik_data
