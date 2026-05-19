@@ -1,6 +1,6 @@
-# Swastik AI 2
+# Swastik AI
 
-Swastik AI 2 is a Flask-based AI chat web application with user authentication, chat session storage, and support for multiple AI providers.
+Swastik AI is a Flask-based AI chat web application with user authentication, chat session storage, and support for multiple AI providers.
 
 ## Key Features
 
@@ -39,8 +39,8 @@ Swastik AI 2 is a Flask-based AI chat web application with user authentication, 
 
 Set these in a `.env` file or environment:
 
-- `DB_PASSWORD` - PostgreSQL password (default: `akshar`)
-- `DB_PORT` - PostgreSQL port (default: `5433`)
+- `DB_PASSWORD` - PostgreSQL password
+- `DB_PORT` - PostgreSQL port
 - `GEMINI_API_KEY` - Google Gemini API key
 - `GROQ_API_KEY` - Groq API key
 - `SAMBANOVA_KEY` - SambaNova API key
@@ -54,9 +54,11 @@ Set these in a `.env` file or environment:
 2. Create and activate a Python virtual environment.
 3. Install dependencies:
    `pip install -r requirements.txt`
-4. Ensure PostgreSQL is running and the `swastik_data` database exists.
-5. Configure environment variables.
-6. Start the app:
+4. Ensure PostgreSQL is running.
+5. Create the database:
+   `createdb swastik_data`
+6. Configure environment variables.
+7. Start the app:
    `python app.py`
 
 The application runs on `http://localhost:5001` by default.
