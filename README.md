@@ -77,4 +77,4 @@ The application runs on `http://localhost:5001` by default.
 ## Notes
 
 - Database tables are created automatically at startup using `db.create_all()` after the PostgreSQL database already exists.
-- In development mode, Flask debug is enabled in `app.py`.
+- In development mode, Flask debug is enabled in `app.py`; do not use debug mode in production.
