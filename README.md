@@ -1,5 +1,4 @@
-<<<<<<< copilot/create-professional-readme-file
-# StockTrade Pro
+# StockTrade
 
 **StockTrade Pro** is a responsive stock trading simulator built with HTML, CSS, and JavaScript. The project recreates a modern trading terminal experience with real-time market simulation, portfolio tracking, watchlists, alerts, admin analytics, and algorithmic trading controls in a single front-end application.
 
